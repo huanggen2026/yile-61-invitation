@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>以勒小组六一儿童节聚会邀请函</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'ZCOOL KuaiLe', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #FFE5B4 0%, #FFCCE5 50%, #E5CCFF 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* 可爱背景装饰 */
+        .bg-decoration {
+            position: fixed;
+            font-size: 40px;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+            animation: float-bg 6s ease-in-out infinite;
+        }
+
+        .bg-decoration:nth-child(1) { top: 5%; left: 5%; animation-delay: 0s; }
+        .bg-decoration:nth-child(2) { top: 15%; right: 8%; animation-delay: 1s; }
+        .bg-decoration:nth-child(3) { top: 35%; left: 3%; animation-delay: 2s; }
+        .bg-decoration:nth-child(4) { top: 55%; right: 5%; animation-delay: 3s; }
+        .bg-decoration:nth-child(5) { top: 75%; left: 8%; animation-delay: 4s; }
+        .bg-decoration:nth-child(6) { top: 85%; right: 10%; animation-delay: 5s; }
+        .bg-decoration:nth-child(7) { top: 25%; left: 12%; animation-delay: 1.5s; }
+        .bg-decoration:nth-child(8) { top: 65%; right: 3%; animation-delay: 2.5s; }
+
+        @keyframes float-bg {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23FFD93D" opacity="0.3"/></svg>');
+            border-radius: 50%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .photo-banner {
+            width: 100%;
+            margin: 20px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .photo-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+        
+        .balloons {
+            font-size: 48px;
+            margin-bottom: 10px;
+            animation: float 2s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        h1 {
+            color: #FF6B9D;
+            font-size: 28px;
+            text-shadow: 2px 2px 0px #FFE5B4;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            color: #9B59B6;
+            font-size: 16px;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #FFF5E6 0%, #FFE6F0 100%);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 3px dashed #FFB6C1;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+            font-size: 16px;
+            color: #5D4E6D;
+        }
+        
+        .info-icon {
+            font-size: 24px;
+            margin-right: 12px;
+            width: 30px;
+        }
+        
+        .schedule {
+            margin: 25px 0;
+        }
+        
+        .schedule-title {
+            text-align: center;
+            color: #FF6B9D;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .schedule-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        
+        .schedule-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .time-badge {
+            background: linear-gradient(135deg, #FF6B9D, #FF8E53);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            white-space: nowrap;
+            margin-right: 15px;
+        }
+        
+        .schedule-content h3 {
+            color: #5D4E6D;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .schedule-content p {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        .games-section {
+            background: linear-gradient(135deg, #E8F8F5 0%, #D5F5E3 100%);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .games-title {
+            text-align: center;
+            color: #27AE60;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .game-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .game-item {
+            background: white;
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 14px;
+            color: #5D4E6D;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .game-emoji {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .tips {
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFF3CD 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #F39C12;
+        }
+        
+        .tips-title {
+            color: #E67E22;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .tips ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .tips li {
+            padding: 5px 0;
+            color: #5D4E6D;
+            font-size: 14px;
+        }
+        
+        .tips li::before {
+            content: '💡 ';
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px dashed #FFB6C1;
+        }
+        
+        .quote {
+            color: #FF6B9D;
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .signature {
+            color: #9B59B6;
+            font-size: 16px;
+        }
+        
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #FF6B9D;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255,107,157,0.4);
+            z-index: 100;
+        }
+        
+        .deco {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.3;
+        }
+        
+        .deco-1 { top: 20px; left: 20px; animation: spin 4s linear infinite; }
+        .deco-2 { bottom: 20px; right: 20px; animation: spin 4s linear infinite reverse; }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 可爱背景装饰 -->
+    <span class="bg-decoration">🎈</span>
+    <span class="bg-decoration">🌟</span>
+    <span class="bg-decoration">🎪</span>
+    <span class="bg-decoration">🎠</span>
+    <span class="bg-decoration">🎁</span>
+    <span class="bg-decoration">🍭</span>
+    <span class="bg-decoration">🎀</span>
+    <span class="bg-decoration">🧸</span>
+
+    <!-- 背景音乐 -->
+    <!-- 
+        使用说明：
+        1. 准备一首 MP3 格式的背景音乐
+        2. 将音乐文件放在与 HTML 文件同一文件夹
+        3. 把下面 src="" 里的内容换成你的音乐文件名，如 src="bgm.mp3"
+    -->
+    <audio id="bgm" loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放
+    </audio>
+    
+    <button class="music-control" onclick="toggleMusic()" title="点击播放/暂停音乐">🎵</button>
+
+    <div class="container">
+        <span class="deco deco-1">🎠</span>
+        <span class="deco deco-2">🎡</span>
+        
+        <div class="header">
+            <div class="balloons">🎈🎈🎈</div>
+            <h1>以勒小组六一儿童节聚会</h1>
+            <p class="subtitle">不管几岁，快乐万岁！</p>
+        </div>
+
+        <div class="photo-banner">
+            <img src="bg.jpg" alt="以勒小组六一活动">
+        </div>
+        
+        <div class="info-box">
+            <div class="info-item">
+                <span class="info-icon">👥</span>
+                <span><strong>参加人员：</strong>以勒小组所有成员</span>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">📍</span>
+                <span><strong>活动地点：</strong>乐清清河公园</span>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">📅</span>
+                <span><strong>活动日期：</strong>5月30日（周五）</span>
+            </div>
+        </div>
+        
+        <div class="schedule">
+            <h2 class="schedule-title">📋 活动流程</h2>
+            
+            <div class="schedule-item">
+                <span class="time-badge">13:00-13:30</span>
+                <div class="schedule-content">
+                    <h3>🚪 到场签到</h3>
+                    <p>陆续到达，自由交流，熟悉场地</p>
+                </div>
+            </div>
+
+            <div class="schedule-item">
+                <span class="time-badge">13:30-13:45</span>
+                <div class="schedule-content">
+                    <h3>🙏 开场仪式</h3>
+                    <p>祷告祈求，为活动献上感恩与祝福</p>
+                </div>
+            </div>
+
+            <div class="schedule-item">
+                <span class="time-badge">13:45-15:30</span>
+                <div class="schedule-content">
+                    <h3>🎮 破冰游戏</h3>
+                    <p>揪尾巴、东南西北跑、踩气球、小鸡捉老鹰</p>
+                </div>
+            </div>
+
+            <div class="schedule-item">
+                <span class="time-badge">15:30-17:00</span>
+                <div class="schedule-content">
+                    <h3>☕ 下午茶时光</h3>
+                    <p>悠闲茶歇，畅聊人生，补充能量</p>
+                </div>
+            </div>
+
+            <div class="schedule-item">
+                <span class="time-badge">17:00-17:30</span>
+                <div class="schedule-content">
+                    <h3>📸 合影留念</h3>
+                    <p>记录美好时光，定格欢乐瞬间</p>
+                </div>
+            </div>
+
+            <div class="schedule-item">
+                <span class="time-badge">17:30</span>
+                <div class="schedule-content">
+                    <h3>🍽️ 晚餐聚会</h3>
+                    <p>全体移步盖竹排挡，继续欢乐</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="games-section">
+            <h2 class="games-title">🎪 游戏预告</h2>
+            <div class="game-list">
+                <div class="game-item">
+                    <span class="game-emoji">🎀</span>
+                    揪尾巴
+                </div>
+                <div class="game-item">
+                    <span class="game-emoji">🧭</span>
+                    东南西北跑
+                </div>
+                <div class="game-item">
+                    <span class="game-emoji">🎈</span>
+                    踩气球
+                </div>
+                <div class="game-item">
+                    <span class="game-emoji">🐤</span>
+                    小鸡捉老鹰
+                </div>
+            </div>
+        </div>
+        
+        <div class="tips">
+            <h3 class="tips-title">💝 温馨提示</h3>
+            <ul>
+                <li>请准时到场，不要错过破冰游戏哦！</li>
+                <li>建议穿着舒适运动装，方便参与游戏</li>
+                <li>下午茶和晚餐已安排妥当，带上好心情来就行</li>
+                <li>天气炎热，记得做好防晒措施</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p class="quote">"童心未泯，所遇皆甜"</p>
+            <p class="signature">以勒小组 敬邀 🦐</p>
+        </div>
+    </div>
+    
+    <script>
+        const bgm = document.getElementById('bgm');
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                bgm.pause();
+                document.querySelector('.music-control').textContent = '🎵';
+            } else {
+                bgm.play().catch(e => {
+                    alert('音乐播放失败，请检查：\n1. 音乐文件是否命名为 bgm.mp3\n2. 文件是否和邀请函放在同一文件夹\n3. 文件是否为 MP3 格式');
+                });
+                document.querySelector('.music-control').textContent = '🔇';
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>
